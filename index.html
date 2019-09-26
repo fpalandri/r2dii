@@ -66,6 +66,9 @@
 <li>
       <a href="https://2degreesinvesting.github.io/r2dii.dataraw/news/index.html">r2dii.darataw</a>
     </li>
+    <li>
+      <a href="https://2degreesinvesting.github.io/r2dii.utils/news/index.html">r2dii.utils</a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -100,10 +103,7 @@
 <!-- badges: start -->
 
 <p><a href="https://2degrees-investing.org/">2 ° Investing Initiative</a> (2dii) maintains a collection or R packages called r2dii. To help you install and use all those packages at once, we also built the r2dii (meta) package. The r2dii package is the only package most users need to know about. Contact us if you need more details.</p>
-<p>Features:</p>
-<ul>
-<li>Functions to access raw or lightly-prepared data. This allows you to access “live” data from 2dii’s dropbox folder and to take a snapshot of it.</li>
-</ul>
+<p>Currently, r2dii allows you to access raw or lightly-prepared data, to create robust r2dii’s paths, and to handle configuration files.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -124,8 +124,9 @@
 <p>These examples provide a high level overview of the main features. For more details see <a href="articles/r2dii.html">Get started</a>.</p>
 <p>Attaching r2dii automatically attaches other r2dii packages.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(r2dii)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; Loading required package: r2dii.dataraw</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt; Loading required package: r2dii.dataprep</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; Loading required package: r2dii.dataprep</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt; Loading required package: r2dii.dataraw</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt; Loading required package: r2dii.utils</span></a></code></pre></div>
 <div id="creating-snapshots" class="section level3">
 <h3 class="hasAnchor">
 <a href="#creating-snapshots" class="anchor"></a>Creating snapshots</h3>
@@ -190,7 +191,7 @@
 <p>Use <code>config</code> to provide a custom configuration file to <code>take_snapshot()</code>.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">custom_config &lt;-<span class="st"> </span><span class="kw">example_config</span>(<span class="st">"config-toy.yml"</span>)</a>
 <a class="sourceLine" id="cb6-2" data-line-number="2">custom_config</a>
-<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt; [1] "C:/Users/Mauro/Documents/R/win-library/3.6/r2dii.dataraw/config-toy.yml"</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt; [1] "C:/Users/Mauro/Documents/R/win-library/3.6/r2dii.utils/config-toy.yml"</span></a>
 <a class="sourceLine" id="cb6-4" data-line-number="4"></a>
 <a class="sourceLine" id="cb6-5" data-line-number="5">custom_config <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb6-6" data-line-number="6"><span class="st">  </span><span class="kw">show_config</span>()</a>
@@ -215,8 +216,8 @@
 <a class="sourceLine" id="cb6-25" data-line-number="25"></a>
 <a class="sourceLine" id="cb6-26" data-line-number="26"><span class="st">"DebtMarketClimate"</span> <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb6-27" data-line-number="27"><span class="st">  </span><span class="kw">take_snapshot</span>(<span class="dt">destdir =</span> <span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>(), <span class="dt">overwrite =</span> <span class="ot">TRUE</span>, <span class="dt">config =</span> custom_config)</a>
-<a class="sourceLine" id="cb6-28" data-line-number="28"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpUztmhf/config-toy.yml'.</span></a>
-<a class="sourceLine" id="cb6-29" data-line-number="29"><span class="co">#&gt; Wrote `DebtMarketClimate` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpUztmhf/DebtMarketClimate.csv.gz'.</span></a></code></pre></div>
+<a class="sourceLine" id="cb6-28" data-line-number="28"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpcJXZtI/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb6-29" data-line-number="29"><span class="co">#&gt; Wrote `DebtMarketClimate` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpcJXZtI/DebtMarketClimate.csv.gz'.</span></a></code></pre></div>
 <ul>
 <li>
 <code>options(r2dii.dataraw_config = &lt;custom_config&gt;)</code> does the same but affects your R session globally.</li>
@@ -225,14 +226,14 @@
 <a class="sourceLine" id="cb7-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb7-3" data-line-number="3"><span class="st">"DebtMarketClimate"</span> <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb7-4" data-line-number="4"><span class="st">  </span><span class="kw">take_snapshot</span>(<span class="dt">destdir =</span> <span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>(), <span class="dt">overwrite =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpUztmhf/config-toy.yml'.</span></a>
-<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt; Wrote `DebtMarketClimate` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpUztmhf/DebtMarketClimate.csv.gz'.</span></a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpcJXZtI/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt; Wrote `DebtMarketClimate` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpcJXZtI/DebtMarketClimate.csv.gz'.</span></a>
 <a class="sourceLine" id="cb7-7" data-line-number="7"><span class="kw">get_config</span>()</a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt; [1] "C:/Users/Mauro/Documents/R/win-library/3.6/r2dii.dataraw/config-toy.yml"</span></a>
+<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt; [1] "C:/Users/Mauro/Documents/R/win-library/3.6/r2dii.utils/config-toy.yml"</span></a>
 <a class="sourceLine" id="cb7-9" data-line-number="9"></a>
 <a class="sourceLine" id="cb7-10" data-line-number="10"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a>
 <a class="sourceLine" id="cb7-11" data-line-number="11"><span class="kw">get_config</span>()</a>
-<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt; [1] "C:/Users/Mauro/Documents/R/win-library/3.6/r2dii.dataraw/config.yml"</span></a></code></pre></div>
+<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt; [1] "C:/Users/Mauro/Documents/R/win-library/3.6/r2dii.utils/config.yml"</span></a></code></pre></div>
 <p>See also <code>?edit_config()</code> to edit the default configuration file.</p>
 </div>
 </div>
