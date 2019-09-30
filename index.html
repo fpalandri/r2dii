@@ -130,111 +130,67 @@
 <div id="creating-snapshots" class="section level3">
 <h3 class="hasAnchor">
 <a href="#creating-snapshots" class="anchor"></a>Creating snapshots</h3>
-<p><code>take_snapshot()</code> snapshots all possible datasets, using a default configuration file, a default destination directory, and does not overwrite existing snapshots.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">take_snapshot</span>()</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#&gt; Skipping existing snapshot of 'config.yml'.</span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt; Skipping existing snapshot of `ALD.BV`.</span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt; Skipping existing snapshot of `ALD.CB`.</span></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt; Skipping existing snapshot of `ALD.CC`.</span></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt; Skipping existing snapshot of `ALD.Company`.</span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt; Skipping existing snapshot of `ALD.EQ`.</span></a>
-<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt; Skipping existing snapshot of `ALD.SPV`.</span></a>
-<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt; Skipping existing snapshot of `BALANCE.SHEET.DATA`.</span></a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; Skipping existing snapshot of `BENCH.REGIONS`.</span></a>
-<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt; Skipping existing snapshot of `BicsSectorBridge`.</span></a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt; Skipping existing snapshot of `CB_OG`.</span></a>
-<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt; Skipping existing snapshot of `DebtMarket`.</span></a>
-<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt; Skipping existing snapshot of `DebtMarketClimate`.</span></a>
-<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt; Skipping existing snapshot of `EQMarket.Size`.</span></a>
-<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt; Skipping existing snapshot of `EQ_OG`.</span></a>
-<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt; Skipping existing snapshot of `FIN.DATA`.</span></a>
-<a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt; Skipping existing snapshot of `Fund.Data`.</span></a>
-<a class="sourceLine" id="cb3-19" data-line-number="19"><span class="co">#&gt; Skipping existing snapshot of `FundsTrusts`.</span></a>
-<a class="sourceLine" id="cb3-20" data-line-number="20"><span class="co">#&gt; Skipping existing snapshot of `GROUPS.GOVT`.</span></a>
-<a class="sourceLine" id="cb3-21" data-line-number="21"><span class="co">#&gt; Skipping existing snapshot of `INDEX.REGIONS`.</span></a>
-<a class="sourceLine" id="cb3-22" data-line-number="22"><span class="co">#&gt; Skipping existing snapshot of `Indices`.</span></a>
-<a class="sourceLine" id="cb3-23" data-line-number="23"><span class="co">#&gt; Skipping existing snapshot of `PHYSICAL.RISK.CB`.</span></a>
-<a class="sourceLine" id="cb3-24" data-line-number="24"><span class="co">#&gt; Skipping existing snapshot of `PHYSICAL.RISK.EQ`.</span></a>
-<a class="sourceLine" id="cb3-25" data-line-number="25"><span class="co">#&gt; Skipping existing snapshot of `Receipts`.</span></a>
-<a class="sourceLine" id="cb3-26" data-line-number="26"><span class="co">#&gt; Skipping existing snapshot of `RevenueSplit`.</span></a>
-<a class="sourceLine" id="cb3-27" data-line-number="27"><span class="co">#&gt; Skipping existing snapshot of `SCEN`.</span></a>
-<a class="sourceLine" id="cb3-28" data-line-number="28"><span class="co">#&gt; Skipping existing snapshot of `SCENLong`.</span></a>
-<a class="sourceLine" id="cb3-29" data-line-number="29"><span class="co">#&gt; Skipping existing snapshot of `SEC.TYPE.BONDS`.</span></a>
-<a class="sourceLine" id="cb3-30" data-line-number="30"><span class="co">#&gt; Skipping existing snapshot of `SectorBridge`.</span></a>
-<a class="sourceLine" id="cb3-31" data-line-number="31"><span class="co">#&gt; Skipping existing snapshot of `TYPE.BONDS`.</span></a>
-<a class="sourceLine" id="cb3-32" data-line-number="32"><span class="co">#&gt; Skipping existing snapshot of `TYPE.EQUITY`.</span></a>
-<a class="sourceLine" id="cb3-33" data-line-number="33"><span class="co">#&gt; Skipping existing snapshot of `TYPE.OTHERS`.</span></a>
-<a class="sourceLine" id="cb3-34" data-line-number="34"><span class="co">#&gt; Skipping existing snapshot of `TYPE.RECEIPTS`.</span></a>
-<a class="sourceLine" id="cb3-35" data-line-number="35"><span class="co">#&gt; Skipping existing snapshot of `sector.bridge`.</span></a>
-<a class="sourceLine" id="cb3-36" data-line-number="36"><span class="co">#&gt; Warning: Can't write the following datasets:</span></a>
-<a class="sourceLine" id="cb3-37" data-line-number="37"><span class="co">#&gt; LoanMarket, LoanMarketClimate</span></a></code></pre></div>
+<p><code>take_snapshot()</code> allows you to take snapshots of multiple datasets. Its default behavior is sensible, but conservative and potentially slow (see <code>take_snapshot()</code>). You may want to change the default arguments.</p>
 <p>Use:</p>
 <ul>
 <li>
 <code>datasets</code> to snapshot specific datasets.</li>
+<li>Use <code>destdir</code> to customize the destination directory.</li>
+<li>Use <code>config</code> to provide a custom configuration file to <code>take_snapshot()</code>.</li>
+</ul>
+<!-- end list --><div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">datasets &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"RevenueSplit"</span>, <span class="st">"EQMarket.Size"</span>)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">custom_destdir &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>()</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">custom_config &lt;-<span class="st"> </span><span class="kw">example_config</span>(<span class="st">"config-toy.yml"</span>)</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="kw">take_snapshot</span>(</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">  datasets,</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">  <span class="dt">destdir =</span> custom_destdir, </a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">  <span class="dt">config =</span> custom_config</a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">)</a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/RevenueSplit.csv'.</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt; Wrote `EQMarket.Size` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/EQMarket.Size.csv'.</span></a></code></pre></div>
+<p>Use:</p>
+<ul>
 <li>
 <code>overwrite = TRUE</code> to overwrite existing snapshots.</li>
 </ul>
-<!-- end list --><div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">datasets &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"RevenueSplit"</span>, <span class="st">"EQMarket.Size"</span>)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">datasets <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="st">  </span><span class="kw">take_snapshot</span>(<span class="dt">overwrite =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; Wrote 'config.yml' to 'C:/Users/Mauro/git/r2dii/inst/extdata/config.yml'.</span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/git/r2dii/inst/extdata/RevenueSplit.csv'.</span></a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt; Wrote `EQMarket.Size` to 'C:/Users/Mauro/git/r2dii/inst/extdata/EQMarket.Size.csv'.</span></a></code></pre></div>
-<p>Use <code>destdir</code> to customize the destination directory.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">datasets <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw">take_snapshot</span>(<span class="dt">overwrite =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt; Wrote 'config.yml' to 'C:/Users/Mauro/git/r2dii/inst/extdata/config.yml'.</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/git/r2dii/inst/extdata/RevenueSplit.csv'.</span></a>
-<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt; Wrote `EQMarket.Size` to 'C:/Users/Mauro/git/r2dii/inst/extdata/EQMarket.Size.csv'.</span></a></code></pre></div>
-<p>Use <code>config</code> to provide a custom configuration file to <code>take_snapshot()</code>.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">custom_config &lt;-<span class="st"> </span><span class="kw">example_config</span>(<span class="st">"config-toy.yml"</span>)</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2">custom_config</a>
-<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt; [1] "C:/Users/Mauro/Documents/R/win-library/3.6/r2dii.utils/config-toy.yml"</span></a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5">custom_config <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="st">  </span><span class="kw">show_config</span>()</a>
-<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt; Registered S3 methods overwritten by 'readr':</span></a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;   method           from </span></a>
-<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt;   format.col_spec  vroom</span></a>
-<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;   print.col_spec   vroom</span></a>
-<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;   print.collector  vroom</span></a>
-<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;   print.date_names vroom</span></a>
-<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt;   print.locale     vroom</span></a>
-<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt;   str.col_spec     vroom</span></a>
-<a class="sourceLine" id="cb6-15" data-line-number="15"><span class="co">#&gt; default:</span></a>
-<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="co">#&gt;   Expect:</span></a>
-<a class="sourceLine" id="cb6-17" data-line-number="17"><span class="co">#&gt;    param_a: a</span></a>
-<a class="sourceLine" id="cb6-18" data-line-number="18"><span class="co">#&gt;    param_1: 1</span></a>
-<a class="sourceLine" id="cb6-19" data-line-number="19"><span class="co">#&gt;    param_true: TRUE</span></a>
-<a class="sourceLine" id="cb6-20" data-line-number="20"><span class="co">#&gt;    param_false: FALSE</span></a>
-<a class="sourceLine" id="cb6-21" data-line-number="21"><span class="co">#&gt;    param_unset:</span></a>
-<a class="sourceLine" id="cb6-22" data-line-number="22"><span class="co">#&gt;   TimeStamps:</span></a>
-<a class="sourceLine" id="cb6-23" data-line-number="23"><span class="co">#&gt;     ALD.Timestamp: 3333</span></a>
-<a class="sourceLine" id="cb6-24" data-line-number="24"><span class="co">#&gt;     FinancialData.Timestamp: 2018Q3</span></a>
-<a class="sourceLine" id="cb6-25" data-line-number="25"></a>
-<a class="sourceLine" id="cb6-26" data-line-number="26"><span class="st">"DebtMarketClimate"</span> <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb6-27" data-line-number="27"><span class="st">  </span><span class="kw">take_snapshot</span>(<span class="dt">destdir =</span> <span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>(), <span class="dt">overwrite =</span> <span class="ot">TRUE</span>, <span class="dt">config =</span> custom_config)</a>
-<a class="sourceLine" id="cb6-28" data-line-number="28"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpOiSXGD/config-toy.yml'.</span></a>
-<a class="sourceLine" id="cb6-29" data-line-number="29"><span class="co">#&gt; Wrote `DebtMarketClimate` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpOiSXGD/DebtMarketClimate.csv.gz'.</span></a></code></pre></div>
+<!-- end list --><div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">take_snapshot</span>(</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">  datasets,</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">  <span class="dt">destdir =</span> custom_destdir, </a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">  <span class="dt">config =</span> custom_config</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">)</a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; Skipping existing snapshot of 'config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt; Skipping existing snapshot of `RevenueSplit`.</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; Skipping existing snapshot of `EQMarket.Size`.</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co"># Overwrite</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="kw">take_snapshot</span>(</a>
+<a class="sourceLine" id="cb4-12" data-line-number="12">  datasets,</a>
+<a class="sourceLine" id="cb4-13" data-line-number="13">  <span class="dt">destdir =</span> custom_destdir, </a>
+<a class="sourceLine" id="cb4-14" data-line-number="14">  <span class="dt">config =</span> custom_config,</a>
+<a class="sourceLine" id="cb4-15" data-line-number="15">  <span class="dt">overwrite =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16">)</a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/RevenueSplit.csv'.</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt; Wrote `EQMarket.Size` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/EQMarket.Size.csv'.</span></a></code></pre></div>
 <ul>
 <li>
-<code>options(r2dii_config = &lt;custom_config&gt;)</code> does the same but affects your R session globally.</li>
+<code>options(r2dii_config = &lt;custom_config&gt;)</code> replaces <code>config</code> and affects your R session globally.</li>
 </ul>
-<!-- end list --><div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">restore &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">r2dii_config =</span> custom_config)</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="st">"DebtMarketClimate"</span> <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="st">  </span><span class="kw">take_snapshot</span>(<span class="dt">destdir =</span> <span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>(), <span class="dt">overwrite =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpOiSXGD/config-toy.yml'.</span></a>
-<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt; Wrote `DebtMarketClimate` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpOiSXGD/DebtMarketClimate.csv.gz'.</span></a>
-<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="kw">get_config</span>()</a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt; [1] "C:/Users/Mauro/Documents/R/win-library/3.6/r2dii.utils/config-toy.yml"</span></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a>
-<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="kw">get_config</span>()</a>
-<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt; [1] "C:/Users/Mauro/Documents/R/win-library/3.6/r2dii.utils/config.yml"</span></a></code></pre></div>
-<p>See also <code>?edit_config()</code> to edit the default configuration file.</p>
+<!-- end list --><div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">restore &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">r2dii_config =</span> custom_config)</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw">take_snapshot</span>(</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">  datasets,</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">  <span class="dt">destdir =</span> custom_destdir, </a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">  <span class="dt">overwrite =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7">)</a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/RevenueSplit.csv'.</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt; Wrote `EQMarket.Size` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/EQMarket.Size.csv'.</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a></code></pre></div>
+<p><a href="https://2degreesinvesting.github.io/r2dii/articles/r2dii.html">Get started</a></p>
 </div>
 </div>
 </div>
