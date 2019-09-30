@@ -132,9 +132,9 @@
 <a class="sourceLine" id="cb2-7" data-line-number="7">  <span class="dt">destdir =</span> custom_destdir, </a>
 <a class="sourceLine" id="cb2-8" data-line-number="8">  <span class="dt">config =</span> custom_config</a>
 <a class="sourceLine" id="cb2-9" data-line-number="9">)</a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; Wrote 'config-toy.yml' to '/tmp/RtmpatQ6ta/config-toy.yml'.</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; Wrote `RevenueSplit` to '/tmp/RtmpatQ6ta/RevenueSplit.csv'.</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; Wrote `BENCH.REGIONS` to '/tmp/RtmpatQ6ta/BENCH.REGIONS.csv'.</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; Wrote 'config-toy.yml' to '/tmp/Rtmprrr8rR/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; Wrote `RevenueSplit` to '/tmp/Rtmprrr8rR/RevenueSplit.csv'.</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; Wrote `BENCH.REGIONS` to '/tmp/Rtmprrr8rR/BENCH.REGIONS.csv'.</span></a></code></pre></div>
 <p>Use:</p>
 <ul>
 <li>
@@ -156,9 +156,9 @@
 <a class="sourceLine" id="cb3-14" data-line-number="14">  <span class="dt">config =</span> custom_config,</a>
 <a class="sourceLine" id="cb3-15" data-line-number="15">  <span class="dt">overwrite =</span> <span class="ot">TRUE</span></a>
 <a class="sourceLine" id="cb3-16" data-line-number="16">)</a>
-<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt; Wrote 'config-toy.yml' to '/tmp/RtmpatQ6ta/config-toy.yml'.</span></a>
-<a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt; Wrote `RevenueSplit` to '/tmp/RtmpatQ6ta/RevenueSplit.csv'.</span></a>
-<a class="sourceLine" id="cb3-19" data-line-number="19"><span class="co">#&gt; Wrote `BENCH.REGIONS` to '/tmp/RtmpatQ6ta/BENCH.REGIONS.csv'.</span></a></code></pre></div>
+<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt; Wrote 'config-toy.yml' to '/tmp/Rtmprrr8rR/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt; Wrote `RevenueSplit` to '/tmp/Rtmprrr8rR/RevenueSplit.csv'.</span></a>
+<a class="sourceLine" id="cb3-19" data-line-number="19"><span class="co">#&gt; Wrote `BENCH.REGIONS` to '/tmp/Rtmprrr8rR/BENCH.REGIONS.csv'.</span></a></code></pre></div>
 <ul>
 <li>
 <code>options(r2dii_config = &lt;custom_config&gt;)</code> replaces <code>config</code> and affects your R session globally.</li>
@@ -170,9 +170,9 @@
 <a class="sourceLine" id="cb4-5" data-line-number="5">  <span class="dt">destdir =</span> custom_destdir, </a>
 <a class="sourceLine" id="cb4-6" data-line-number="6">  <span class="dt">overwrite =</span> <span class="ot">TRUE</span></a>
 <a class="sourceLine" id="cb4-7" data-line-number="7">)</a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; Wrote 'config-toy.yml' to '/tmp/RtmpatQ6ta/config-toy.yml'.</span></a>
-<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt; Wrote `RevenueSplit` to '/tmp/RtmpatQ6ta/RevenueSplit.csv'.</span></a>
-<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt; Wrote `BENCH.REGIONS` to '/tmp/RtmpatQ6ta/BENCH.REGIONS.csv'.</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; Wrote 'config-toy.yml' to '/tmp/Rtmprrr8rR/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt; Wrote `RevenueSplit` to '/tmp/Rtmprrr8rR/RevenueSplit.csv'.</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt; Wrote `BENCH.REGIONS` to '/tmp/Rtmprrr8rR/BENCH.REGIONS.csv'.</span></a>
 <a class="sourceLine" id="cb4-11" data-line-number="11"></a>
 <a class="sourceLine" id="cb4-12" data-line-number="12"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a></code></pre></div>
 </div>
@@ -190,140 +190,138 @@
 <p>A family of functions create robust paths.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">path_dropbox_2dii</span>()</a>
 <a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt; /home/travis/Dropbox (2° Investing)</span></a></code></pre></div>
-<p>For this to work, you must have the Dropbox folder of 2dii directly under home (the default location).</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">fs<span class="op">::</span><span class="kw"><a href="http://fs.r-lib.org/reference/dir_ls.html">dir_ls</a></span>(fs<span class="op">::</span><span class="kw"><a href="http://fs.r-lib.org/reference/path_expand.html">path_home</a></span>(), <span class="dt">regexp =</span> <span class="st">"Dropbox"</span>)</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="co">#&gt; character(0)</span></a></code></pre></div>
+<p>(The root directory for you may look like <code>C:/Users/You/...</code>)</p>
 </div>
 <div id="configuration-file" class="section level2">
 <h2 class="hasAnchor">
 <a href="#configuration-file" class="anchor"></a>Configuration file</h2>
 <p>A family of functions help you to deal with the configuration file.</p>
 <p><code>edit_config()</code> opens the default configuration file so you can edit it.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="cf">if</span> (<span class="kw"><a href="https://rdrr.io/r/base/interactive.html">interactive</a></span>()) <span class="kw">edit_config</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="cf">if</span> (<span class="kw"><a href="https://rdrr.io/r/base/interactive.html">interactive</a></span>()) <span class="kw">edit_config</span>()</a></code></pre></div>
 <p>(I’m not in an interactive session so the chunk above won’t run.)</p>
 <p><code>get_config()</code> outputs a path to a configuration file. By default it outputs the path to the default configuration file – stored in the r2dii.dataraw package.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">get_config</span>()</a>
-<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co">#&gt; [1] "/home/travis/R/Library/r2dii.utils/config.yml"</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">get_config</span>()</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="co">#&gt; [1] "/home/travis/R/Library/r2dii.utils/config.yml"</span></a></code></pre></div>
 <p><code>show_config()</code> shows a configuration file.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">show_config</span>(<span class="kw">get_config</span>(), <span class="dt">n_max =</span> <span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb10-2" data-line-number="2">Registered S3 methods overwritten by <span class="st">'readr'</span><span class="op">:</span></a>
-<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="st">  </span>method           from </a>
-<a class="sourceLine" id="cb10-4" data-line-number="4">  format.col_spec  vroom</a>
-<a class="sourceLine" id="cb10-5" data-line-number="5">  print.col_spec   vroom</a>
-<a class="sourceLine" id="cb10-6" data-line-number="6">  print.collector  vroom</a>
-<a class="sourceLine" id="cb10-7" data-line-number="7">  print.date_names vroom</a>
-<a class="sourceLine" id="cb10-8" data-line-number="8">  print.locale     vroom</a>
-<a class="sourceLine" id="cb10-9" data-line-number="9">  str.col_spec     vroom</a>
-<a class="sourceLine" id="cb10-10" data-line-number="10">default<span class="op">:</span></a>
-<a class="sourceLine" id="cb10-11" data-line-number="11"><span class="st">  </span>Methodology<span class="op">:</span></a>
-<a class="sourceLine" id="cb10-12" data-line-number="12"><span class="st">    </span>HasBookValue<span class="op">:</span><span class="st"> </span><span class="ot">FALSE</span> <span class="co"># ignore</span></a>
-<a class="sourceLine" id="cb10-13" data-line-number="13">    HasRISK<span class="op">:</span><span class="st"> </span><span class="ot">TRUE</span> <span class="co"># ignore a flag specifying if the physical risk assessment should be done</span></a>
-<a class="sourceLine" id="cb10-14" data-line-number="14">    HasMAP<span class="op">:</span><span class="st"> </span><span class="ot">TRUE</span> <span class="co"># flag to specify if map data (production per country) should be prepared</span></a>
-<a class="sourceLine" id="cb10-15" data-line-number="15">    HasSB<span class="op">:</span><span class="st"> </span><span class="ot">FALSE</span> <span class="co"># ignore for now</span></a>
-<a class="sourceLine" id="cb10-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb10-17" data-line-number="17">  TimeStamps<span class="op">:</span></a>
-<a class="sourceLine" id="cb10-18" data-line-number="18"><span class="st">    </span><span class="co"># setting the dates of the data-input for financial and asset-level data: this identifies the input files</span></a>
-<a class="sourceLine" id="cb10-19" data-line-number="19"><span class="st">    </span>FinancialData.Timestamp<span class="op">:</span><span class="st"> </span>2018Q4 <span class="co"># specifies the Financial data sourcing date ie from which date the financial information is taken</span></a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">show_config</span>(<span class="kw">get_config</span>(), <span class="dt">n_max =</span> <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">Registered S3 methods overwritten by <span class="st">'readr'</span><span class="op">:</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="st">  </span>method           from </a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">  format.col_spec  vroom</a>
+<a class="sourceLine" id="cb9-5" data-line-number="5">  print.col_spec   vroom</a>
+<a class="sourceLine" id="cb9-6" data-line-number="6">  print.collector  vroom</a>
+<a class="sourceLine" id="cb9-7" data-line-number="7">  print.date_names vroom</a>
+<a class="sourceLine" id="cb9-8" data-line-number="8">  print.locale     vroom</a>
+<a class="sourceLine" id="cb9-9" data-line-number="9">  str.col_spec     vroom</a>
+<a class="sourceLine" id="cb9-10" data-line-number="10">default<span class="op">:</span></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="st">  </span>Methodology<span class="op">:</span></a>
+<a class="sourceLine" id="cb9-12" data-line-number="12"><span class="st">    </span>HasBookValue<span class="op">:</span><span class="st"> </span><span class="ot">FALSE</span> <span class="co"># ignore</span></a>
+<a class="sourceLine" id="cb9-13" data-line-number="13">    HasRISK<span class="op">:</span><span class="st"> </span><span class="ot">TRUE</span> <span class="co"># ignore a flag specifying if the physical risk assessment should be done</span></a>
+<a class="sourceLine" id="cb9-14" data-line-number="14">    HasMAP<span class="op">:</span><span class="st"> </span><span class="ot">TRUE</span> <span class="co"># flag to specify if map data (production per country) should be prepared</span></a>
+<a class="sourceLine" id="cb9-15" data-line-number="15">    HasSB<span class="op">:</span><span class="st"> </span><span class="ot">FALSE</span> <span class="co"># ignore for now</span></a>
+<a class="sourceLine" id="cb9-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb9-17" data-line-number="17">  TimeStamps<span class="op">:</span></a>
+<a class="sourceLine" id="cb9-18" data-line-number="18"><span class="st">    </span><span class="co"># setting the dates of the data-input for financial and asset-level data: this identifies the input files</span></a>
+<a class="sourceLine" id="cb9-19" data-line-number="19"><span class="st">    </span>FinancialData.Timestamp<span class="op">:</span><span class="st"> </span>2018Q4 <span class="co"># specifies the Financial data sourcing date ie from which date the financial information is taken</span></a></code></pre></div>
 <p>You can change the default configuration file globally via <code><a href="https://rdrr.io/r/base/options.html">options()</a></code>.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">your_config &lt;-<span class="st"> </span><span class="kw">example_config</span>(<span class="st">"config-toy.yml"</span>)</a>
-<a class="sourceLine" id="cb11-2" data-line-number="2">restore &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">r2dii_config =</span> your_config)</a>
-<a class="sourceLine" id="cb11-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="kw">get_config</span>()</a>
-<a class="sourceLine" id="cb11-5" data-line-number="5">[<span class="dv">1</span>] <span class="st">"/home/travis/R/Library/r2dii.utils/config-toy.yml"</span></a>
-<a class="sourceLine" id="cb11-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb11-7" data-line-number="7"><span class="kw">show_config</span>(<span class="kw">get_config</span>())</a>
-<a class="sourceLine" id="cb11-8" data-line-number="8">default<span class="op">:</span></a>
-<a class="sourceLine" id="cb11-9" data-line-number="9"><span class="st">  </span>Expect<span class="op">:</span></a>
-<a class="sourceLine" id="cb11-10" data-line-number="10"><span class="st">   </span>param_a<span class="op">:</span><span class="st"> </span>a</a>
-<a class="sourceLine" id="cb11-11" data-line-number="11">   param_<span class="dv">1</span><span class="op">:</span><span class="st"> </span><span class="dv">1</span></a>
-<a class="sourceLine" id="cb11-12" data-line-number="12">   param_true<span class="op">:</span><span class="st"> </span><span class="ot">TRUE</span></a>
-<a class="sourceLine" id="cb11-13" data-line-number="13">   param_false<span class="op">:</span><span class="st"> </span><span class="ot">FALSE</span></a>
-<a class="sourceLine" id="cb11-14" data-line-number="14">   param_unset<span class="op">:</span></a>
-<a class="sourceLine" id="cb11-15" data-line-number="15"><span class="st">  </span>TimeStamps<span class="op">:</span></a>
-<a class="sourceLine" id="cb11-16" data-line-number="16"><span class="st">    </span>ALD.Timestamp<span class="op">:</span><span class="st"> </span><span class="dv">3333</span></a>
-<a class="sourceLine" id="cb11-17" data-line-number="17">    FinancialData.Timestamp<span class="op">:</span><span class="st"> </span>2018Q3</a>
-<a class="sourceLine" id="cb11-18" data-line-number="18"></a>
-<a class="sourceLine" id="cb11-19" data-line-number="19"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">your_config &lt;-<span class="st"> </span><span class="kw">example_config</span>(<span class="st">"config-toy.yml"</span>)</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">restore &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">r2dii_config =</span> your_config)</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="kw">get_config</span>()</a>
+<a class="sourceLine" id="cb10-5" data-line-number="5">[<span class="dv">1</span>] <span class="st">"/home/travis/R/Library/r2dii.utils/config-toy.yml"</span></a>
+<a class="sourceLine" id="cb10-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="kw">show_config</span>(<span class="kw">get_config</span>())</a>
+<a class="sourceLine" id="cb10-8" data-line-number="8">default<span class="op">:</span></a>
+<a class="sourceLine" id="cb10-9" data-line-number="9"><span class="st">  </span>Expect<span class="op">:</span></a>
+<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="st">   </span>param_a<span class="op">:</span><span class="st"> </span>a</a>
+<a class="sourceLine" id="cb10-11" data-line-number="11">   param_<span class="dv">1</span><span class="op">:</span><span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb10-12" data-line-number="12">   param_true<span class="op">:</span><span class="st"> </span><span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb10-13" data-line-number="13">   param_false<span class="op">:</span><span class="st"> </span><span class="ot">FALSE</span></a>
+<a class="sourceLine" id="cb10-14" data-line-number="14">   param_unset<span class="op">:</span></a>
+<a class="sourceLine" id="cb10-15" data-line-number="15"><span class="st">  </span>TimeStamps<span class="op">:</span></a>
+<a class="sourceLine" id="cb10-16" data-line-number="16"><span class="st">    </span>ALD.Timestamp<span class="op">:</span><span class="st"> </span><span class="dv">3333</span></a>
+<a class="sourceLine" id="cb10-17" data-line-number="17">    FinancialData.Timestamp<span class="op">:</span><span class="st"> </span>2018Q3</a>
+<a class="sourceLine" id="cb10-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb10-19" data-line-number="19"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a></code></pre></div>
 </div>
 <div id="access-configuration-parameters-and-create-configuration-sensitive-paths" class="section level2">
 <h2 class="hasAnchor">
 <a href="#access-configuration-parameters-and-create-configuration-sensitive-paths" class="anchor"></a>Access configuration parameters and create configuration-sensitive paths</h2>
 <p>A family of functions are sensitive to the configuration file you use. This includes all functions to access configuration parameters, and some of the functions to create paths.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co"># Using the default configuration file</span></a>
-<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/options.html">getOption</a></span>(<span class="st">"r2dii_config"</span>)</a>
-<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="co">#&gt; NULL</span></a>
-<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="kw">FINANCIAL.TIMESTAMP</span>()</a>
-<a class="sourceLine" id="cb12-5" data-line-number="5"><span class="co">#&gt; [1] "2018Q4"</span></a>
-<a class="sourceLine" id="cb12-6" data-line-number="6"><span class="kw">FIN.DATA.PATH</span>()</a>
-<a class="sourceLine" id="cb12-7" data-line-number="7"><span class="co">#&gt; /home/travis/Dropbox (2° Investing)/PortCheck/00_Data/02_FinancialData/2018Q4</span></a>
-<a class="sourceLine" id="cb12-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb12-9" data-line-number="9"><span class="co"># Using your configuration file</span></a>
-<a class="sourceLine" id="cb12-10" data-line-number="10">your_config &lt;-<span class="st"> </span><span class="kw">example_config</span>(<span class="st">"config-toy.yml"</span>)</a>
-<a class="sourceLine" id="cb12-11" data-line-number="11">restore &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">r2dii_config =</span> your_config)</a>
-<a class="sourceLine" id="cb12-12" data-line-number="12"><span class="kw">FINANCIAL.TIMESTAMP</span>()</a>
-<a class="sourceLine" id="cb12-13" data-line-number="13"><span class="co">#&gt; [1] "2018Q3"</span></a>
-<a class="sourceLine" id="cb12-14" data-line-number="14"><span class="kw">FIN.DATA.PATH</span>()</a>
-<a class="sourceLine" id="cb12-15" data-line-number="15"><span class="co">#&gt; /home/travis/Dropbox (2° Investing)/PortCheck/00_Data/02_FinancialData/2018Q3</span></a>
-<a class="sourceLine" id="cb12-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb12-17" data-line-number="17"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="co"># Using the default configuration file</span></a>
+<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/options.html">getOption</a></span>(<span class="st">"r2dii_config"</span>)</a>
+<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="co">#&gt; NULL</span></a>
+<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="kw">FINANCIAL.TIMESTAMP</span>()</a>
+<a class="sourceLine" id="cb11-5" data-line-number="5"><span class="co">#&gt; [1] "2018Q4"</span></a>
+<a class="sourceLine" id="cb11-6" data-line-number="6"><span class="kw">FIN.DATA.PATH</span>()</a>
+<a class="sourceLine" id="cb11-7" data-line-number="7"><span class="co">#&gt; /home/travis/Dropbox (2° Investing)/PortCheck/00_Data/02_FinancialData/2018Q4</span></a>
+<a class="sourceLine" id="cb11-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb11-9" data-line-number="9"><span class="co"># Using your configuration file</span></a>
+<a class="sourceLine" id="cb11-10" data-line-number="10">your_config &lt;-<span class="st"> </span><span class="kw">example_config</span>(<span class="st">"config-toy.yml"</span>)</a>
+<a class="sourceLine" id="cb11-11" data-line-number="11">restore &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">r2dii_config =</span> your_config)</a>
+<a class="sourceLine" id="cb11-12" data-line-number="12"><span class="kw">FINANCIAL.TIMESTAMP</span>()</a>
+<a class="sourceLine" id="cb11-13" data-line-number="13"><span class="co">#&gt; [1] "2018Q3"</span></a>
+<a class="sourceLine" id="cb11-14" data-line-number="14"><span class="kw">FIN.DATA.PATH</span>()</a>
+<a class="sourceLine" id="cb11-15" data-line-number="15"><span class="co">#&gt; /home/travis/Dropbox (2° Investing)/PortCheck/00_Data/02_FinancialData/2018Q3</span></a>
+<a class="sourceLine" id="cb11-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb11-17" data-line-number="17"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a></code></pre></div>
 </div>
 <div id="extending-functions-to-access-configuration-parameters" class="section level2">
 <h2 class="hasAnchor">
 <a href="#extending-functions-to-access-configuration-parameters" class="anchor"></a>Extending functions to access configuration parameters</h2>
 <p>Eventually you will likely need to access new configuration parameters. How would you expand this family of functions?</p>
 <p>Use <code>get_param()</code> to create new functions to access configuration parameters.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="co"># Create a `get_a_value()` function to get `a_value` from `a_field`</span></a>
-<a class="sourceLine" id="cb13-2" data-line-number="2">get_a_value &lt;-<span class="st"> </span><span class="kw">get_param</span>(<span class="st">"a_field"</span>)</a>
-<a class="sourceLine" id="cb13-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb13-4" data-line-number="4"><span class="co"># Create an example configuration file</span></a>
-<a class="sourceLine" id="cb13-5" data-line-number="5">config &lt;-<span class="st"> </span>glue<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/glue/man/glue.html">glue</a></span>(<span class="st">"</span></a>
-<a class="sourceLine" id="cb13-6" data-line-number="6"><span class="st">   default:</span></a>
-<a class="sourceLine" id="cb13-7" data-line-number="7"><span class="st">     a_field: a_value</span></a>
-<a class="sourceLine" id="cb13-8" data-line-number="8"><span class="st"> "</span>)</a>
-<a class="sourceLine" id="cb13-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb13-10" data-line-number="10"><span class="kw">show_config</span>(config)</a>
-<a class="sourceLine" id="cb13-11" data-line-number="11">  default<span class="op">:</span></a>
-<a class="sourceLine" id="cb13-12" data-line-number="12"><span class="st">    </span>a_field<span class="op">:</span><span class="st"> </span>a_value</a></code></pre></div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="co"># Write the config file to a temporary file</span></a>
-<a class="sourceLine" id="cb14-2" data-line-number="2">config_file &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span>()</a>
-<a class="sourceLine" id="cb14-3" data-line-number="3">readr<span class="op">::</span><span class="kw"><a href="https://readr.tidyverse.org/reference/read_lines.html">write_lines</a></span>(config, config_file)</a>
-<a class="sourceLine" id="cb14-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="kw">get_a_value</span>(<span class="dt">file =</span> config_file)</a>
-<a class="sourceLine" id="cb14-6" data-line-number="6"><span class="co">#&gt; [1] "a_value"</span></a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co"># Create a `get_a_value()` function to get `a_value` from `a_field`</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">get_a_value &lt;-<span class="st"> </span><span class="kw">get_param</span>(<span class="st">"a_field"</span>)</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="co"># Create an example configuration file</span></a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">config &lt;-<span class="st"> </span>glue<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/glue/man/glue.html">glue</a></span>(<span class="st">"</span></a>
+<a class="sourceLine" id="cb12-6" data-line-number="6"><span class="st">   default:</span></a>
+<a class="sourceLine" id="cb12-7" data-line-number="7"><span class="st">     a_field: a_value</span></a>
+<a class="sourceLine" id="cb12-8" data-line-number="8"><span class="st"> "</span>)</a>
+<a class="sourceLine" id="cb12-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb12-10" data-line-number="10"><span class="kw">show_config</span>(config)</a>
+<a class="sourceLine" id="cb12-11" data-line-number="11">  default<span class="op">:</span></a>
+<a class="sourceLine" id="cb12-12" data-line-number="12"><span class="st">    </span>a_field<span class="op">:</span><span class="st"> </span>a_value</a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="co"># Write the config file to a temporary file</span></a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">config_file &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span>()</a>
+<a class="sourceLine" id="cb13-3" data-line-number="3">readr<span class="op">::</span><span class="kw"><a href="https://readr.tidyverse.org/reference/read_lines.html">write_lines</a></span>(config, config_file)</a>
+<a class="sourceLine" id="cb13-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb13-5" data-line-number="5"><span class="kw">get_a_value</span>(<span class="dt">file =</span> config_file)</a>
+<a class="sourceLine" id="cb13-6" data-line-number="6"><span class="co">#&gt; [1] "a_value"</span></a></code></pre></div>
 </div>
 <div id="datasets" class="section level2">
 <h2 class="hasAnchor">
 <a href="#datasets" class="anchor"></a>Datasets</h2>
 <p>A family of functions allow you to read local datasets from your local 2dii Dropbox-folder, e.g.:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="co"># Not showing this for privacy</span></a>
-<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="kw">ALD.BV</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="co"># Not showing this for privacy</span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="kw">ALD.BV</span>()</a></code></pre></div>
 <p>A family of datasets become directly available when you attach the r2dii.dataraw package, e.g.:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">INDEX.REGIONS</a>
-<a class="sourceLine" id="cb16-2" data-line-number="2"><span class="co">#&gt; # A tibble: 327 x 3</span></a>
-<a class="sourceLine" id="cb16-3" data-line-number="3"><span class="co">#&gt;    EquityMarket Country             CountryISO</span></a>
-<a class="sourceLine" id="cb16-4" data-line-number="4"><span class="co">#&gt;    &lt;chr&gt;        &lt;chr&gt;               &lt;chr&gt;     </span></a>
-<a class="sourceLine" id="cb16-5" data-line-number="5"><span class="co">#&gt;  1 Global       Afghanistan         AF        </span></a>
-<a class="sourceLine" id="cb16-6" data-line-number="6"><span class="co">#&gt;  2 Global       Albania             AL        </span></a>
-<a class="sourceLine" id="cb16-7" data-line-number="7"><span class="co">#&gt;  3 Global       Algeria             DZ        </span></a>
-<a class="sourceLine" id="cb16-8" data-line-number="8"><span class="co">#&gt;  4 Global       American Samoa      AS        </span></a>
-<a class="sourceLine" id="cb16-9" data-line-number="9"><span class="co">#&gt;  5 Global       Andorra             AD        </span></a>
-<a class="sourceLine" id="cb16-10" data-line-number="10"><span class="co">#&gt;  6 Global       Angola              AO        </span></a>
-<a class="sourceLine" id="cb16-11" data-line-number="11"><span class="co">#&gt;  7 Global       Anguilla            AI        </span></a>
-<a class="sourceLine" id="cb16-12" data-line-number="12"><span class="co">#&gt;  8 Global       Antigua And Barbuda AG        </span></a>
-<a class="sourceLine" id="cb16-13" data-line-number="13"><span class="co">#&gt;  9 Global       Argentina           AR        </span></a>
-<a class="sourceLine" id="cb16-14" data-line-number="14"><span class="co">#&gt; 10 Global       Armenia             AM        </span></a>
-<a class="sourceLine" id="cb16-15" data-line-number="15"><span class="co">#&gt; # … with 317 more rows</span></a>
-<a class="sourceLine" id="cb16-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb16-17" data-line-number="17">GROUPS.GOVT</a>
-<a class="sourceLine" id="cb16-18" data-line-number="18"><span class="co">#&gt;  [1] "Sovereign"              "Sovereign Agency"      </span></a>
-<a class="sourceLine" id="cb16-19" data-line-number="19"><span class="co">#&gt;  [3] "Municipal"              "Municipal-City"        </span></a>
-<a class="sourceLine" id="cb16-20" data-line-number="20"><span class="co">#&gt;  [5] "Municipal-County"       "Multi-National"        </span></a>
-<a class="sourceLine" id="cb16-21" data-line-number="21"><span class="co">#&gt;  [7] "Regional"               "Regional(state/provnc)"</span></a>
-<a class="sourceLine" id="cb16-22" data-line-number="22"><span class="co">#&gt;  [9] "Export/Import Bank"     "Regional Authority"    </span></a>
-<a class="sourceLine" id="cb16-23" data-line-number="23"><span class="co">#&gt; [11] "Regional Agencies"</span></a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">INDEX.REGIONS</a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="co">#&gt; # A tibble: 327 x 3</span></a>
+<a class="sourceLine" id="cb15-3" data-line-number="3"><span class="co">#&gt;    EquityMarket Country             CountryISO</span></a>
+<a class="sourceLine" id="cb15-4" data-line-number="4"><span class="co">#&gt;    &lt;chr&gt;        &lt;chr&gt;               &lt;chr&gt;     </span></a>
+<a class="sourceLine" id="cb15-5" data-line-number="5"><span class="co">#&gt;  1 Global       Afghanistan         AF        </span></a>
+<a class="sourceLine" id="cb15-6" data-line-number="6"><span class="co">#&gt;  2 Global       Albania             AL        </span></a>
+<a class="sourceLine" id="cb15-7" data-line-number="7"><span class="co">#&gt;  3 Global       Algeria             DZ        </span></a>
+<a class="sourceLine" id="cb15-8" data-line-number="8"><span class="co">#&gt;  4 Global       American Samoa      AS        </span></a>
+<a class="sourceLine" id="cb15-9" data-line-number="9"><span class="co">#&gt;  5 Global       Andorra             AD        </span></a>
+<a class="sourceLine" id="cb15-10" data-line-number="10"><span class="co">#&gt;  6 Global       Angola              AO        </span></a>
+<a class="sourceLine" id="cb15-11" data-line-number="11"><span class="co">#&gt;  7 Global       Anguilla            AI        </span></a>
+<a class="sourceLine" id="cb15-12" data-line-number="12"><span class="co">#&gt;  8 Global       Antigua And Barbuda AG        </span></a>
+<a class="sourceLine" id="cb15-13" data-line-number="13"><span class="co">#&gt;  9 Global       Argentina           AR        </span></a>
+<a class="sourceLine" id="cb15-14" data-line-number="14"><span class="co">#&gt; 10 Global       Armenia             AM        </span></a>
+<a class="sourceLine" id="cb15-15" data-line-number="15"><span class="co">#&gt; # … with 317 more rows</span></a>
+<a class="sourceLine" id="cb15-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb15-17" data-line-number="17">GROUPS.GOVT</a>
+<a class="sourceLine" id="cb15-18" data-line-number="18"><span class="co">#&gt;  [1] "Sovereign"              "Sovereign Agency"      </span></a>
+<a class="sourceLine" id="cb15-19" data-line-number="19"><span class="co">#&gt;  [3] "Municipal"              "Municipal-City"        </span></a>
+<a class="sourceLine" id="cb15-20" data-line-number="20"><span class="co">#&gt;  [5] "Municipal-County"       "Multi-National"        </span></a>
+<a class="sourceLine" id="cb15-21" data-line-number="21"><span class="co">#&gt;  [7] "Regional"               "Regional(state/provnc)"</span></a>
+<a class="sourceLine" id="cb15-22" data-line-number="22"><span class="co">#&gt;  [9] "Export/Import Bank"     "Regional Authority"    </span></a>
+<a class="sourceLine" id="cb15-23" data-line-number="23"><span class="co">#&gt; [11] "Regional Agencies"</span></a></code></pre></div>
 <p>Some datasets are sensitive to the configuration file, which you can always check with <code>get_config()</code>.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw">get_config</span>()</a>
-<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="co">#&gt; [1] "/home/travis/R/Library/r2dii.utils/config.yml"</span></a></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">get_config</span>()</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2"><span class="co">#&gt; [1] "/home/travis/R/Library/r2dii.utils/config.yml"</span></a></code></pre></div>
 </div>
   </div>
 
