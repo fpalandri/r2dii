@@ -138,7 +138,7 @@
 <li>Use <code>destdir</code> to customize the destination directory.</li>
 <li>Use <code>config</code> to provide a custom configuration file to <code>take_snapshot()</code>.</li>
 </ul>
-<!-- end list --><div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">datasets &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"RevenueSplit"</span>, <span class="st">"EQMarket.Size"</span>)</a>
+<!-- end list --><div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">datasets &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"RevenueSplit"</span>, <span class="st">"BENCH.REGIONS"</span>)</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">custom_destdir &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>()</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3">custom_config &lt;-<span class="st"> </span><span class="kw">example_config</span>(<span class="st">"config-toy.yml"</span>)</a>
 <a class="sourceLine" id="cb3-4" data-line-number="4"></a>
@@ -147,9 +147,9 @@
 <a class="sourceLine" id="cb3-7" data-line-number="7">  <span class="dt">destdir =</span> custom_destdir, </a>
 <a class="sourceLine" id="cb3-8" data-line-number="8">  <span class="dt">config =</span> custom_config</a>
 <a class="sourceLine" id="cb3-9" data-line-number="9">)</a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/config-toy.yml'.</span></a>
-<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/RevenueSplit.csv'.</span></a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt; Wrote `EQMarket.Size` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/EQMarket.Size.csv'.</span></a></code></pre></div>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/Rtmp6BIiCB/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/AppData/Local/Temp/Rtmp6BIiCB/RevenueSplit.csv'.</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt; Wrote `BENCH.REGIONS` to 'C:/Users/Mauro/AppData/Local/Temp/Rtmp6BIiCB/BENCH.REGIONS.csv'.</span></a></code></pre></div>
 <p>Use:</p>
 <ul>
 <li>
@@ -162,7 +162,7 @@
 <a class="sourceLine" id="cb4-5" data-line-number="5">)</a>
 <a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; Skipping existing snapshot of 'config-toy.yml'.</span></a>
 <a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt; Skipping existing snapshot of `RevenueSplit`.</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; Skipping existing snapshot of `EQMarket.Size`.</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; Skipping existing snapshot of `BENCH.REGIONS`.</span></a>
 <a class="sourceLine" id="cb4-9" data-line-number="9"></a>
 <a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co"># Overwrite</span></a>
 <a class="sourceLine" id="cb4-11" data-line-number="11"><span class="kw">take_snapshot</span>(</a>
@@ -171,9 +171,9 @@
 <a class="sourceLine" id="cb4-14" data-line-number="14">  <span class="dt">config =</span> custom_config,</a>
 <a class="sourceLine" id="cb4-15" data-line-number="15">  <span class="dt">overwrite =</span> <span class="ot">TRUE</span></a>
 <a class="sourceLine" id="cb4-16" data-line-number="16">)</a>
-<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/config-toy.yml'.</span></a>
-<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/RevenueSplit.csv'.</span></a>
-<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt; Wrote `EQMarket.Size` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/EQMarket.Size.csv'.</span></a></code></pre></div>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/Rtmp6BIiCB/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/AppData/Local/Temp/Rtmp6BIiCB/RevenueSplit.csv'.</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt; Wrote `BENCH.REGIONS` to 'C:/Users/Mauro/AppData/Local/Temp/Rtmp6BIiCB/BENCH.REGIONS.csv'.</span></a></code></pre></div>
 <ul>
 <li>
 <code>options(r2dii_config = &lt;custom_config&gt;)</code> replaces <code>config</code> and affects your R session globally.</li>
@@ -185,9 +185,9 @@
 <a class="sourceLine" id="cb5-5" data-line-number="5">  <span class="dt">destdir =</span> custom_destdir, </a>
 <a class="sourceLine" id="cb5-6" data-line-number="6">  <span class="dt">overwrite =</span> <span class="ot">TRUE</span></a>
 <a class="sourceLine" id="cb5-7" data-line-number="7">)</a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/config-toy.yml'.</span></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/RevenueSplit.csv'.</span></a>
-<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt; Wrote `EQMarket.Size` to 'C:/Users/Mauro/AppData/Local/Temp/RtmpCIcnH1/EQMarket.Size.csv'.</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt; Wrote 'config-toy.yml' to 'C:/Users/Mauro/AppData/Local/Temp/Rtmp6BIiCB/config-toy.yml'.</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt; Wrote `RevenueSplit` to 'C:/Users/Mauro/AppData/Local/Temp/Rtmp6BIiCB/RevenueSplit.csv'.</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt; Wrote `BENCH.REGIONS` to 'C:/Users/Mauro/AppData/Local/Temp/Rtmp6BIiCB/BENCH.REGIONS.csv'.</span></a>
 <a class="sourceLine" id="cb5-11" data-line-number="11"></a>
 <a class="sourceLine" id="cb5-12" data-line-number="12"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a></code></pre></div>
 <p><a href="https://2degreesinvesting.github.io/r2dii/articles/r2dii.html">Get started</a></p>
