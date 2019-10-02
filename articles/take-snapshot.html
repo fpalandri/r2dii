@@ -124,9 +124,13 @@
 <a class="sourceLine" id="cb1-7" data-line-number="7">  <span class="dt">destdir =</span> custom_destdir, </a>
 <a class="sourceLine" id="cb1-8" data-line-number="8">  <span class="dt">config =</span> custom_config</a>
 <a class="sourceLine" id="cb1-9" data-line-number="9">)</a></code></pre></div>
-<pre><code>## Wrote 'config-toy.yml' to '/tmp/RtmpINO7uL/config-toy.yml'.</code></pre>
-<pre><code>## Wrote `RevenueSplit` to '/tmp/RtmpINO7uL/RevenueSplit.csv'.</code></pre>
-<pre><code>## Wrote `BENCH.REGIONS` to '/tmp/RtmpINO7uL/BENCH.REGIONS.csv'.</code></pre>
+<pre><code>## Wrote 'config-toy.yml' to '/tmp/RtmpuZGK3z/config-toy.yml'.</code></pre>
+<pre><code>## Warning in gzfile(file, "rb"): cannot open compressed file '/home/travis/
+## Dropbox (2° Investing)/2° Investing Team/People/Klaus/GitHub/Reference/
+## ReferenceData/BenchRegions.rda', probable reason 'No such file or
+## directory'</code></pre>
+<pre><code>## Warning: Can't write the following datasets:
+## RevenueSplit, BENCH.REGIONS</code></pre>
 <p>Use:</p>
 <ul>
 <li>
@@ -138,8 +142,12 @@
 <a class="sourceLine" id="cb5-4" data-line-number="4">  <span class="dt">config =</span> custom_config</a>
 <a class="sourceLine" id="cb5-5" data-line-number="5">)</a></code></pre></div>
 <pre><code>## Skipping existing snapshot of 'config-toy.yml'.</code></pre>
-<pre><code>## Skipping existing snapshot of `RevenueSplit`.</code></pre>
-<pre><code>## Skipping existing snapshot of `BENCH.REGIONS`.</code></pre>
+<pre><code>## Warning in gzfile(file, "rb"): cannot open compressed file '/home/travis/
+## Dropbox (2° Investing)/2° Investing Team/People/Klaus/GitHub/Reference/
+## ReferenceData/BenchRegions.rda', probable reason 'No such file or
+## directory'</code></pre>
+<pre><code>## Warning: Can't write the following datasets:
+## RevenueSplit, BENCH.REGIONS</code></pre>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="co"># Overwrite</span></a>
 <a class="sourceLine" id="cb9-2" data-line-number="2"><span class="kw">take_snapshot</span>(</a>
 <a class="sourceLine" id="cb9-3" data-line-number="3">  datasets,</a>
@@ -147,24 +155,30 @@
 <a class="sourceLine" id="cb9-5" data-line-number="5">  <span class="dt">config =</span> custom_config,</a>
 <a class="sourceLine" id="cb9-6" data-line-number="6">  <span class="dt">overwrite =</span> <span class="ot">TRUE</span></a>
 <a class="sourceLine" id="cb9-7" data-line-number="7">)</a></code></pre></div>
-<pre><code>## Wrote 'config-toy.yml' to '/tmp/RtmpINO7uL/config-toy.yml'.</code></pre>
-<pre><code>## Wrote `RevenueSplit` to '/tmp/RtmpINO7uL/RevenueSplit.csv'.</code></pre>
-<pre><code>## Wrote `BENCH.REGIONS` to '/tmp/RtmpINO7uL/BENCH.REGIONS.csv'.</code></pre>
+<pre><code>## Wrote 'config-toy.yml' to '/tmp/RtmpuZGK3z/config-toy.yml'.</code></pre>
+<pre><code>## Warning in gzfile(file, "rb"): cannot open compressed file '/home/travis/Dropbox (2° Investing)/2° Investing Team/People/Klaus/GitHub/Reference/ReferenceData/BenchRegions.rda', probable reason 'No such file or directory'
+
+## Warning in gzfile(file, "rb"): Can't write the following datasets:
+## RevenueSplit, BENCH.REGIONS</code></pre>
 <ul>
 <li>
 <code>options(r2dii_config = &lt;custom_config&gt;)</code> replaces <code>config</code> and affects your R session globally.</li>
 </ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">restore &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">r2dii_config =</span> custom_config)</a>
-<a class="sourceLine" id="cb13-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb13-3" data-line-number="3"><span class="kw">take_snapshot</span>(</a>
-<a class="sourceLine" id="cb13-4" data-line-number="4">  datasets,</a>
-<a class="sourceLine" id="cb13-5" data-line-number="5">  <span class="dt">destdir =</span> custom_destdir, </a>
-<a class="sourceLine" id="cb13-6" data-line-number="6">  <span class="dt">overwrite =</span> <span class="ot">TRUE</span></a>
-<a class="sourceLine" id="cb13-7" data-line-number="7">)</a></code></pre></div>
-<pre><code>## Wrote 'config-toy.yml' to '/tmp/RtmpINO7uL/config-toy.yml'.</code></pre>
-<pre><code>## Wrote `RevenueSplit` to '/tmp/RtmpINO7uL/RevenueSplit.csv'.</code></pre>
-<pre><code>## Wrote `BENCH.REGIONS` to '/tmp/RtmpINO7uL/BENCH.REGIONS.csv'.</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">restore &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">r2dii_config =</span> custom_config)</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="kw">take_snapshot</span>(</a>
+<a class="sourceLine" id="cb12-4" data-line-number="4">  datasets,</a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">  <span class="dt">destdir =</span> custom_destdir, </a>
+<a class="sourceLine" id="cb12-6" data-line-number="6">  <span class="dt">overwrite =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb12-7" data-line-number="7">)</a></code></pre></div>
+<pre><code>## Wrote 'config-toy.yml' to '/tmp/RtmpuZGK3z/config-toy.yml'.</code></pre>
+<pre><code>## Warning in gzfile(file, "rb"): cannot open compressed file '/home/travis/
+## Dropbox (2° Investing)/2° Investing Team/People/Klaus/GitHub/Reference/
+## ReferenceData/BenchRegions.rda', probable reason 'No such file or
+## directory'</code></pre>
+<pre><code>## Warning: Can't write the following datasets:
+## RevenueSplit, BENCH.REGIONS</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(restore)</a></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
